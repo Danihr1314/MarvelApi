@@ -1,23 +1,49 @@
-.section {
+ .section {
+  margin-top: 100px;
   display: flex;
   width: 100%;
   height: auto;
   align-items: center;
   justify-content: center;
-  margin: 15px;
 }
 
 .img {
   width: 267px;
   height: 400px;
+  border-radius: 20px 20px;
   object-fit: cover;
-  opacity: 0.6;
   transition: 2s ease;
 }
 
-.img:hover {
-  cursor: crosshair;
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
-}
+.card {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .img:hover {
+    box-shadow:10px 10px 10px rgba(255, 3, 3, 0.616);
+    transform: scale(1.050);
+  }
+  
+  .name {
+    position: absolute;
+    top: 410px;
+    left: calc(50% - 150px);
+    width: 300px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #fff;
+    font-size: 24px;
+    z-index: 2;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
+  .card:hover .name {
+    opacity: 1;
+  }
+  

@@ -22,7 +22,9 @@ async function getCharacters({ params }) {
             <article key={character.id}>
               <Link href="/Characters/[id]" as={`/Characters/${character.id}`}>
                 <div className={styles.card}>
-                  <h2>{character.name}</h2>
+                  <div className={styles.cardOverlay}>
+                    <h2 className={styles.name}>{character.name}</h2>
+                  </div>
                   <img
                     className={styles.img}
                     src={`${character.thumbnail.path}.jpg`}
