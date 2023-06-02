@@ -8,7 +8,7 @@ const links = [{
   route: '/'
 }, {
   label: 'Comics',
-  route: '/comics'
+  route: '/Comics'
 }, {
   label: 'Characters',
   route: '/characters'
