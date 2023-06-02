@@ -1,32 +1,45 @@
 import React from 'react';
+import Link from 'next/link'
+
 import styles from './NavBar.module.css';
+
+const links = [{
+  label: 'Home',
+  route: '/'
+}, {
+  label: 'Comics',
+  route: '/comics'
+}, {
+  label: 'Characters',
+  route: '/characters'
+}, {
+  label: 'Movies',
+  route: '/movies'
+}, {
+  label: 'Games',
+  route: '/games'
+}, {
+  label: 'Videos',
+  route: '/videos'
+}]
 
 const NavBar = () => {
   return (
     <div className={styles.NavBar}>
-      <li>
-        <ul>
-          <a href="/home">Home</a>
-        </ul>
-        <ul>
-          <a href="/comics">Comics</a>
-        </ul>
-        <ul>
-          <a href="characters">Characters</a>
-        </ul>
-        <ul>
-          <a href="movies">Movies</a>
-        </ul>
-        <ul>
-          <a href="shows">TV Shows</a>
-        </ul>
-        <ul>
-          <a href="games">Games</a>
-        </ul>
-        <ul>
-          <a href="videos">Videos</a>
-        </ul>
-      </li>
+      <header>
+        <nav>
+          <ul className={styles.path}>
+            {links.map(({ label, route }) => (
+              <li key={route}>
+                <Link href={route}>
+                  {label}
+                </Link>
+              </li>
+            )
+            )}
+          </ul>
+        </nav>
+      </header>
     </div>
   );
 };

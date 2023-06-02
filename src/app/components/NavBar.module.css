@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.NavBar li {
+.path {
   list-style: none;
   display: flex;
   flex-direction: row;
