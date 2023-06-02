@@ -30,7 +30,7 @@ const NavBar = () => {
         <nav>
           <ul className={styles.path}>
             {links.map(({ label, route }) => (
-              <li key={route}>
+              <li className={styles.menu} key={route}>
                 <Link href={route}>
                   {label}
                 </Link>
