@@ -11,16 +11,16 @@ const links = [{
   route: '/Comics'
 }, {
   label: 'Characters',
-  route: '/characters'
+  route: '/Characters'
 }, {
   label: 'Movies',
-  route: '/movies'
+  route: '/Movies'
 }, {
   label: 'Games',
-  route: '/games'
+  route: '/Games'
 }, {
   label: 'Videos',
-  route: '/videos'
+  route: '/Videos'
 }]
 
 const NavBar = () => {
