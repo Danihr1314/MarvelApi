@@ -20,14 +20,14 @@
   color:#21ebff;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .menu::before{
   content: "";
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: -3px;
+  left: -3px;
   width: 10px;
   height: 10px;
   border-top: 2px solid #21ebff;
@@ -39,8 +39,8 @@
 .menu::after{
   content: "";
   position: absolute;
-  bottom: -1px;
-  right: -1px;
+  bottom: -3px;
+  right: -3px;
   width: 10px;
   height: 10px;
   border-bottom: 2px solid #21ebff;
@@ -61,4 +61,8 @@
   color: #000;
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s
+}
+
+.link{
+  position: fixed;
 }

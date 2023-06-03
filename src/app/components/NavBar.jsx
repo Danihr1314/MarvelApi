@@ -31,7 +31,7 @@ const NavBar = () => {
           <ul className={styles.path}>
             {links.map(({ label, route }) => (
               <li className={styles.menu} key={route}>
-                <Link href={route}>
+                <Link className={styles.link} href={route}>
                   {label}
                 </Link>
               </li>
