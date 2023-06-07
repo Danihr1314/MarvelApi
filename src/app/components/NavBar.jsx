@@ -13,14 +13,14 @@ const links = [{
   label: 'Characters',
   route: '/Characters'
 }, {
-  label: 'Movies',
-  route: '/Movies'
+  label: 'Stories',
+  route: '/Stories'
 }, {
-  label: 'Games',
-  route: '/Games'
+  label: 'Series',
+  route: '/Series'
 }, {
-  label: 'Videos',
-  route: '/Videos'
+  label: 'Creators',
+  route: '/Creators'
 }]
 
 const NavBar = () => {
