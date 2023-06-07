@@ -15,13 +15,13 @@ async function characters({ params }) {
   return (
     <div>
       <h1>"Estamos en el characters"</h1>
-      <section>
+      <section className={styles.section}>
         {charArray.slice(0, 5).map((character) => {
           return (
             <article key={character.id}>
               <div className={styles.card}>
                 <h2>{character.name}</h2>
-                <img
+                <img className={styles.img}
                   src={`${character.thumbnail.path}.jpg`}
                   alt="Character image"
                 />
