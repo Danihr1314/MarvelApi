@@ -1,21 +1,23 @@
-.section{
-    display: flex;
-    width: 600px;
-    height: 430px;
-    align-items: center;
+.section {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
 }
 
-.img{
-    width: 267px;
-    height: 400px;
-    object-fit: cover;
-    opacity: .6; 
-    transition: 2s ease;
+.img {
+  width: 267px;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: 2s ease;
 }
 
-.img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-} 
+.img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}

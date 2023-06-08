@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import styles from './Characters.module.css';
 
@@ -8,7 +9,7 @@ const fetchCharacters = () => {
   ).then((res) => res.json());
 };
 
-async function characters({ params }) {
+async function getCharacters({ params }) {
   const char = await fetchCharacters();
   const charArray = char.data.results;
 
@@ -19,13 +20,16 @@ async function characters({ params }) {
         {charArray.slice(0, 5).map((character) => {
           return (
             <article key={character.id}>
-              <div className={styles.card}>
-                <h2>{character.name}</h2>
-                <img className={styles.img}
-                  src={`${character.thumbnail.path}.jpg`}
-                  alt="Character image"
-                />
-              </div>
+              <Link href="/Characters/[id]" as={`/Characters/${character.id}`}>
+                <div className={styles.card}>
+                  <h2>{character.name}</h2>
+                  <img
+                    className={styles.img}
+                    src={`${character.thumbnail.path}.jpg`}
+                    alt="Character image"
+                  />
+                </div>
+              </Link>
             </article>
           );
         })}
@@ -34,4 +38,4 @@ async function characters({ params }) {
   );
 }
 
-export default characters;
+export default getCharacters;
