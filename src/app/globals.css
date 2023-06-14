@@ -4,12 +4,6 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  background-image: url('https://wallpapercave.com/wp/wp5399598.jpg');
-  background-repeat: no-repeat;
-  background-position: center, center;
-  height: 1800px;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 * {

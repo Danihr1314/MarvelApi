@@ -1,21 +1,22 @@
-.section{
-    display: flex;
-    width: 600px;
-    height: 430px;
-    align-items: center;
+.section {
+  display: flex;
+  width: 600px;
+  height: 430px;
+  align-items: center;
+  margin-top: 100px;
 }
 
-.img{
-    width: 267px;
-    height: 400px;
-    object-fit: cover;
-    opacity: .6; 
-    transition: 2s ease;
+.img {
+  width: 267px;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: 2s ease;
 }
 
-.img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-} 
+.img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
