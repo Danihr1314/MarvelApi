@@ -1,10 +1,15 @@
- .section {
+.section {
   margin-top: 100px;
   display: flex;
   width: 100%;
   height: auto;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 40px;
+  background-color: black;
+  background-image: url('https://images.hdqwalls.com/wallpapers/scifi-space-black-hole-4k-vi.jpg');
 }
 
 .img {
@@ -16,34 +21,39 @@
 }
 
 .card {
-    position: relative;
-    width: 250px;
-    height: 450px;
-    padding: 10px;
-    overflow: hidden;
-  }
+  margin-top: 20px;
+  position: relative;
+  width: 250px;
+  height: 500px;
+  padding: 10px;
+  overflow: hidden;
+}
 
-  .img:hover {
-    box-shadow:10px 10px 10px rgba(255, 3, 3, 0.616);
-    transform: scale(1.050);
-  }
-  
-  .name {
-    position: absolute;
-    top: 410px;
-    left: calc(50% - 150px);
-    width: 300px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    color: #fff;
-    font-size: 24px;
-    z-index: 2;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px 20px;
-  }
-  
-  .card:hover .name {
-    opacity: 1;
-  }
-  
+.img:hover {
+  box-shadow: 10px 60px 10px rgba(0, 0, 0, 0.616);
+  transform: scale(1.05);
+}
+
+.name {
+  position: absolute;
+  top: 410px;
+  left: calc(50% - 150px);
+  width: 300px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #fff;
+  font-size: 24px;
+  z-index: 2;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.card:hover .name {
+  opacity: 1;
+}
+
+.cardOverlay {
+  width: 100%;
+  height: auto;
+}

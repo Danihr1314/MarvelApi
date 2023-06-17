@@ -15,9 +15,8 @@ async function getCharacters({ params }) {
 
   return (
     <div>
-      <h1>"Estamos en el characters"</h1>
       <section className={styles.section}>
-        {charArray.slice(0, 5).map((character) => {
+        {charArray.slice(0, 20).map((character) => {
           return (
             <article key={character.id}>
               <Link href="/Characters/[id]" as={`/Characters/${character.id}`}>
@@ -27,7 +26,7 @@ async function getCharacters({ params }) {
                   </div>
                   <img
                     className={styles.img}
-                    src={`${character.thumbnail.path}.jpg`}
+                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
                     alt="Character image"
                   />
                 </div>

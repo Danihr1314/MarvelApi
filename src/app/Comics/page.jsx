@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Comics.module.css'
+import styles from './Comics.module.css';
 
 const fetchComics = () => {
   return fetch(
@@ -10,8 +10,7 @@ const fetchComics = () => {
 
 async function getComics({ params }) {
   const comics = await fetchComics();
-  const comicArray = comics.data.results
-
+  const comicArray = comics.data.results;
 
   return (
     <div>
@@ -19,22 +18,34 @@ async function getComics({ params }) {
       <section className={styles.section}>
         {comicArray.slice(0, 5).map((comic) => {
           return (
-            <article key={comic.id}>
-              <div className={styles.card}>
-                <h2>{comic.title}</h2>
-                <img className={styles.img}
-                  src={`${comic.thumbnail.path}.jpg`}
-                  alt="Character image"
-                />
+            <a href="" className={styles.card}>
+              <img
+                src={`${comic.thumbnail.path}.jpg`}
+                className={styles.card_image}
+                alt=""
+              />
+              <div className={styles.card_overlay}>
+                <div className={styles.card_header}></div>
               </div>
-            </article>
+            </a>
           );
         })}
       </section>
-
     </div>
   );
 }
 
 export default getComics;
 
+{
+  /* <article key={comic.id}>
+              <div className={styles.card}>
+                <img
+                  className={styles.img}
+                  src={`${comic.thumbnail.path}.jpg`}
+                  alt="Character image"
+                />
+                <h2 className={styles.title}>{comic.title}</h2>
+              </div>
+            </article> */
+}

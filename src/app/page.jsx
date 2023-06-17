@@ -25,7 +25,7 @@ async function getEvents({ params }) {
                 <div className={styles.card}>
                   <img
                     className={styles.img}
-                    src={`${event.thumbnail.path}.jpg`}
+                    src={`${event.thumbnail.path}.${event.thumbnail.extension}`}
                     alt="Serie image"
                   />
                   <div className={styles.text}>

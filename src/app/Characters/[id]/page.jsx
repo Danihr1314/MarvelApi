@@ -16,7 +16,10 @@ export default async function Character({ params }) {
   return (
     <div>
       <h1>{charArray.name}</h1>
-      <img src={`${charArray.thumbnail.path}.jpg`} alt="character photo" />
+      <img
+        src={`${charArray.thumbnail.path}.${charArray.thumbnail.extension}`}
+        alt="character photo"
+      />
       <p>
         {charArray.description
           ? charArray.description
