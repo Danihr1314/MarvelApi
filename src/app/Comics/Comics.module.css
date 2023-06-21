@@ -1,83 +1,72 @@
-/* .section {
+.section{
+  padding-top: 20vh;
   display: flex;
-  width: 600px;
-  height: 430px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  background-image: linear-gradient(to top, #B40A0A, #730c07, #4f0504, #450505, #180101);
+}
+
+
+.card{
+  display: flex;
   align-items: center;
-  margin-top: 100px;
-  gap: 15px;
-}
-
-.card {
-  height: 500px;
-}
-
-.img {
-  width: 267px;
-  height: 400px;
-  object-fit: cover;
-  opacity: 0.6;
-  transition: 2s ease;
-  border-radius: 40px;
-}
-
-.title {
-  z-index: 1;
-  background-color: #3f3f3f;
-  transform: translateY(-100%);
-  border-radius: 30px;
-} */
-
-.section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 4rem 5vw;
-  padding: 0;
-  list-style-type: none;
-}
-
-.card {
-  position: relative;
-  display: block;
-  height: 100%;
-  border-radius: calc(40 * 1px);
+  margin-left: 75px;
+  margin-right: 75px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(240, 248, 255, 0);
+  box-shadow: 0 15px 45px #000;
   overflow: hidden;
-  text-decoration: none;
+  transition: 0.7s;
 }
 
-.card_image {
-  width: 100%;
-  height: auto;
+.card:hover{
+  width: 600px;
+  
 }
 
-.card_overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  border-radius: calc(40 * 1px);
-  background-color: #ffffff;
-  transform: translateY(100%);
-  transition: 0.2s ease-in-out;
-}
-
-.card:hover .card_overlay {
-  transform: translateY(0);
-}
-
-.card_header {
+.card .img{
   position: relative;
+  min-width: 300px;
+  width: 300px;
+  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 2em;
-  padding: 2em;
-  border-radius: calc(40 * 1px) 0 0 0;
-  background-color: #ffffff;
-  transform: translateY(-100%);
-  transition: 0.2s ease-in-out;
+  transition: 0.5s;
 }
 
-.card:hover .card_header {
-  transform: translateY(0);
+.card:hover .img{
+  transform: rotate(-20deg);
+}
+
+.card .img img{
+  height: 90%;
+  width: 85%;
+}
+
+.card .details{
+  position: relative;
+  min-width: 300px;
+  background:#262525;
+  display:flex;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  color: aliceblue;
+}
+
+.card .details::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid rgb(77, 10, 10);
 }

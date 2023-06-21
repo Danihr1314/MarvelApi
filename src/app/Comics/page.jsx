@@ -11,23 +11,28 @@ const fetchComics = () => {
 async function getComics({ params }) {
   const comics = await fetchComics();
   const comicArray = comics.data.results;
+  console.log(comicArray.prices)
 
   return (
     <div>
-      <h1>"Estamos en el Comics"</h1>
       <section className={styles.section}>
-        {comicArray.slice(0, 5).map((comic) => {
+        {comicArray.slice(0, 8).map((comic) => {
           return (
-            <a href="" className={styles.card}>
-              <img
-                src={`${comic.thumbnail.path}.jpg`}
-                className={styles.card_image}
-                alt=""
-              />
-              <div className={styles.card_overlay}>
-                <div className={styles.card_header}></div>
+            <article key={comic.id}>
+              <div className={styles.card}>
+                <div className={styles.img}>
+                  <img
+                    src={`${comic.thumbnail.path}.jpg`}
+                    alt="Character image"
+                  />
+                </div>
+                <div className={styles.details}>
+                  <h2 className={styles.title}>{comic.title}</h2>
+                  {/* <p>{comic.prices}</p> */}
+                  <p>pages: {comic.pageCount}</p>
+                </div>
               </div>
-            </a>
+            </article>
           );
         })}
       </section>
@@ -37,15 +42,4 @@ async function getComics({ params }) {
 
 export default getComics;
 
-{
-  /* <article key={comic.id}>
-              <div className={styles.card}>
-                <img
-                  className={styles.img}
-                  src={`${comic.thumbnail.path}.jpg`}
-                  alt="Character image"
-                />
-                <h2 className={styles.title}>{comic.title}</h2>
-              </div>
-            </article> */
-}
+
