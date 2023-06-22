@@ -11,7 +11,6 @@ const fetchComics = () => {
 async function getComics({ params }) {
   const comics = await fetchComics();
   const comicArray = comics.data.results;
-  console.log(comicArray.prices)
 
   return (
     <div>
@@ -28,7 +27,6 @@ async function getComics({ params }) {
                 </div>
                 <div className={styles.details}>
                   <h2 className={styles.title}>{comic.title}</h2>
-                  {/* <p>{comic.prices}</p> */}
                   <p>pages: {comic.pageCount}</p>
                 </div>
               </div>
@@ -41,5 +39,3 @@ async function getComics({ params }) {
 }
 
 export default getComics;
-
-
