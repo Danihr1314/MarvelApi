@@ -81,6 +81,9 @@ async function getSeries({ params }) {
                   src={`${serie.thumbnail.path}.jpg`}
                   alt="Serie image"
                 />
+                <div className={styles.capa}>
+                  <h3>{serie.title}</h3>
+                </div>
               </div>
             </article>
           );

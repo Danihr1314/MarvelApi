@@ -15,7 +15,7 @@ async function getComics({ params }) {
   return (
     <div>
       <section className={styles.section}>
-        {comicArray.slice(0, 8).map((comic) => {
+        {comicArray.slice(0, 9).map((comic) => {
           return (
             <article key={comic.id}>
               <div className={styles.card}>

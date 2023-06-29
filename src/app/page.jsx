@@ -19,15 +19,16 @@ async function getEvents({ params }) {
           <img src="https://wallpaperaccess.com/full/2832527.jpg" alt="" />
         </div>
         <section className={styles.section}>
-          {eventArray?.slice(0, 5).map((event) => {
+          {eventArray?.slice(0, 6).map((event) => {
             return (
               <article key={event.id}>
                 <div className={styles.card}>
-                  <img
-                    className={styles.img}
-                    src={`${event.thumbnail.path}.${event.thumbnail.extension}`}
-                    alt="Serie image"
-                  />
+                  <div className={styles.img}>
+                    <img
+                      src={`${event.thumbnail.path}.${event.thumbnail.extension}`}
+                      alt="Serie image"
+                    />
+                  </div>
                   <div className={styles.text}>
                     <h2>{event.title}</h2>
                     <p>{event.description}</p>

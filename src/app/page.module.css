@@ -1,26 +1,48 @@
+.hero {
+  width: 100%;
+  height: auto;
+}
+
 .hero img {
   width: 100%;
   height: auto;
-  animation-duration: 20s;
 }
 
-/* .section {
-  /* background-color: #ffffff; */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem;
+  background-color: black;
+}
 
 .section article {
+  width: 30%;
+  height: auto;
   border-radius: 25px 0 25px 0;
-  margin: 30px;
-  background-color: #ffffff;
+  background-color: #cac9c9;
   color: black;
   box-shadow: 10px 10px 10px rgba(255, 3, 3, 0.616);
 }
 
-.section article div {
-  display: flex;
+.card {
+  width: 100%;
+  height: auto;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
 }
 
 .text {
   margin: 3%;
   flex-direction: column;
   gap: 2rem;
+  text-align: center;
 }
